@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation     A resource file for checking on a Tesla Account.
-Library           Selenium2Library
+Library           SeleniumLibrary
 
 *** Variables ***
 ${USERNAME}             user@example.com
