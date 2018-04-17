@@ -1,20 +1,24 @@
 # Dude, Where's My VIN?
 
-This is a simple test written for [Robot Framework](http://robotframework.org/) that will check your Tesla reservation to see if your VIN has been assigned. I use [PushBullet](https://www.pushbullet.com/) to notify me if the test passes.
+I (usually) have better things to do than obsessively check my reservation status page to see if they've assigned me a VIN yet. So I decided to automate that part of my life.
 
-Modify this all you want, I make no claims it will work for you. I also offer no support. Have at it!
+This is a simple test suite written for [Robot Framework](http://robotframework.org/) that will check your Tesla reservation to see if your VIN has been assigned. I used [PushBullet](https://www.pushbullet.com/) to notify me if the test passes.
+
+Modify this all you want, I make no claims it will work for you. I also offer no support (but will accept contributions and/or enhancements). Have at it!
 
 Requirements:
 
 - Chrome
-- Python 3
-- These Python packages:
 
-    ```bash
-    pip install pushbullet-cli
-    pip install robotframework
-    pip install robotframework-seleniumlibrary
-    ```
+- Python 3
+
+- these Python packages:
+
+  ```bash
+  pip install pushbullet-cli
+  pip install robotframework
+  pip install robotframework-seleniumlibrary
+  ```
 
 Modify the `resource.robot` file to contain your Tesla account email, password, and reservation number you want to check on. You could also change how you get notified by modifying the command of the `Notify` keyword.
 
