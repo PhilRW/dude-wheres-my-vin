@@ -24,6 +24,8 @@ Modify this all you want, I make no claims it will work for you. I also offer no
 
 Modify the `resource.robot` file to contain your Tesla account email, password, and reservation number you want to check on. You could also change how you get notified by modifying the command in the `Notify` keyword.
 
+Oh yeah, and you'll need to configure [pushbullet-cli](https://github.com/GustavoKatel/pushbullet-cli) if you want to use that part of it.
+
 ## Run
 
 Execute `robot tesla.robot` to execute the test suite.
