@@ -40,7 +40,7 @@ Authenticate
 
 Notify
     [Arguments]    ${message}
-    Run Keyword If    '${TEST STATUS}' == 'PASS'    Run    pb push "${message}"
+    Run    pb push "${message}"
 
 Cleanup
     Close Browser
