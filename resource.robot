@@ -3,14 +3,13 @@ Documentation     A resource file for checking on a Tesla Account.
 Library           SeleniumLibrary
 
 *** Variables ***
-${USERNAME}             user@example.com
-${PASSWORD}             thisisnotagoodpassword
-${RESERVATION NUMBER}   123456789
-${BROWSER}              Chrome
-${DELAY}                0
-${LOGIN URL}            https://auth.tesla.com/login
-${ACCOUNT URL}          https://www.tesla.com/teslaaccount
-${RESERVATION URL}      ${ACCOUNT URL}/profile?rn=RN${RESERVATION NUMBER}
+${USERNAME}       user@example.com
+${PASSWORD}       thisisabadpassword
+${BROWSER}        Chrome
+${DELAY}          0
+${LOGIN URL}      https://auth.tesla.com/login
+${ACCOUNT URL}    https://www.tesla.com/teslaaccount
+${RESERVATION URL}    ${EMPTY}
 
 *** Keywords ***
 Open Browser To Login Page
@@ -36,7 +35,6 @@ Authenticate
     Input Password    ${PASSWORD}
     Submit Credentials
     Title Should Be    Tesla Account | Tesla
-    Go To    ${RESERVATION URL}
 
 Notify
     [Arguments]    ${message}
