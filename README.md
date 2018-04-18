@@ -33,20 +33,6 @@ Modify the `resource.robot` file to contain your Tesla account email, password, 
 
 Oh yeah, and you'll need to configure [pushbullet-cli](https://github.com/GustavoKatel/pushbullet-cli) to set your API key, device, etc., if you want to get push notifications. Your API key is also known as your Access Token, and is available from your [Pushbullet Account Page](https://www.pushbullet.com/#settings/account).
 
-## Note on reservation page text
-
-If you've configured but have steps pending like financing and/or a trade-in, your reservation page may have the text `Complete the steps below to take delivery.` instead of the default `Your delivery profile is complete.`. Edit the `tesla.robot` file to update the text, or comment out the whole test if you prefer such as: 
-
-  ```bash
-  # Edited text version: 
-  Configured check
-    Page Should Contain    Complete the steps below to take delivery.
-  
-  # Commented out test version:
-  # Configured check
-  #   Page Should Contain    Your delivery profile is complete.
-  ```
-
 ## Run
 
 Execute `robot tesla.robot` to execute the test suite.
