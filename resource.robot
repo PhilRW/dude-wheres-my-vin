@@ -20,7 +20,7 @@ Open Browser To Login Page
 
 Input Username
     [Arguments]    ${username}
-    Input Text email    ${username}
+    Input Text    email    ${username}
 
 Input Password
     [Arguments]    ${password}
