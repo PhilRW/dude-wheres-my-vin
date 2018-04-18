@@ -6,9 +6,6 @@ Suite Setup      Authenticate
 Suite Teardown   Cleanup
 
 *** Test Cases ***
-Configured check
-    Page Should Contain    Your delivery profile is complete.
-
 VIN check
-    Run Keyword And Continue On Failure    Page Should Contain    VIN
+    Run Keyword And Continue On Failure    Page Should Contain    5YJ
     [Teardown]    Run Keyword If    '${TEST STATUS}' == 'PASS'    Notify    Tesla VIN found!
