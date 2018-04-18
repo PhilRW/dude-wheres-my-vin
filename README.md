@@ -35,3 +35,7 @@ Or you could add the `cron.sh` script to your crontab to execute every so often,
 `0	*	*	*	*	cd ~/dude-wheres-my-vin && ./cron.sh`
 
 You may have to modify the `cron.sh` file to contain the correct path to your `robot` and `chromedriver` executables.
+
+### Also...
+
+If you have more than one reservation, you can modify `tesla.robot` file to duplicate the `VIN check` test with different reservation numbers.
