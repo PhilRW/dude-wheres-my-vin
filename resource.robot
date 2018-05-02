@@ -9,7 +9,7 @@ ${BROWSER}        Chrome
 ${DELAY}          0
 ${LOGIN URL}      https://auth.tesla.com/login
 ${ACCOUNT URL}    https://www.tesla.com/teslaaccount
-${RESERVATION URL}    ${EMPTY}
+${PUSHBULLET KEY}    x.12345678911234567892123456789312
 
 *** Keywords ***
 Open Browser To Login Page
@@ -38,7 +38,7 @@ Authenticate
 
 Notify
     [Arguments]    ${message}
-    Run    pb push "${message}"
+    Run    export PUSHBULLET_KEY=${PUSHBULLET KEY} && pb push "${message}"
 
 Cleanup
     Close Browser

@@ -29,9 +29,17 @@ Modify this all you want, I make no claims it will work for you. I also offer no
 
 ## Setup
 
-Modify the `resource.robot` file to contain your Tesla account email, password, and reservation number you want to check on. You could also change how you get notified by modifying the command in the `Notify` keyword. By default it uses the `pb` command to send a notification to all configured [PushBullet](https://www.pushbullet.com) devices. 
+Modify the `resource.robot` file to contain your Tesla account email, password, reservation number you want to check on, and [Pushbullet API key](https://www.pushbullet.com/#settings/account). By default it uses the `pb` command to send a notification to all configured [PushBullet](https://www.pushbullet.com) devices.
 
 Oh yeah, and you'll need to configure [pushbullet-cli](https://github.com/GustavoKatel/pushbullet-cli) to set your API key, device, etc., if you want to get push notifications. Your API key is also known as your Access Token, and is available from your [Pushbullet Account Page](https://www.pushbullet.com/#settings/account).
+
+Optionally, you could change how you get notified by modifying the command in the `Notify` keyword. For example, you could change the line to read something like this if you use [Keybase](https://keybase.io/) (and you really should, it's awesome):
+
+```
+   Run    keybase chat send ${KB USER} ${message}`
+```
+
+Then you would add variables (in this case `${KB USER}`) as appropriate.
 
 ## Run
 
