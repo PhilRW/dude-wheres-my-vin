@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation     A resource file for checking on a Tesla Account.
-Library           SeleniumLibrary
+Library           SeleniumLibrary     run_on_failure=NOTHING
 
 *** Variables ***
 ${USERNAME}       user@example.com
