@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation     A resource file for checking on a Tesla Account.
-Library           SeleniumLibrary
+Library           SeleniumLibrary     run_on_failure=NOTHING
 
 *** Variables ***
 ${USERNAME}       user@example.com
@@ -13,6 +13,10 @@ ${PUSHBULLET KEY}    x.12345678911234567892123456789312
 
 *** Keywords ***
 Open Browser To Login Page
+    ${chrome_options} =     Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    Call Method    ${chrome_options}   add_argument    headless
+    Call Method    ${chrome_options}   add_argument    disable-gpu
+    ${options}=     Call Method     ${chrome_options}    to_capabilities
     Open Browser    ${LOGIN URL}    ${BROWSER}
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
